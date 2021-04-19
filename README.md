@@ -1,2 +1,2 @@
-# Trail Elixir e Phoenix
+# Inmana App
  Criação de uma API JSON com Elixir e Phoenix
