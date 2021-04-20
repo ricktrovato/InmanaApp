@@ -1,5 +1,5 @@
 defmodule Inmana.Restaurants.Create do
-  alias Inmana.{Restaurant, Repo}
+  alias Inmana.{Repo, Restaurant}
 
   def call(params) do
     params
@@ -10,6 +10,6 @@ defmodule Inmana.Restaurants.Create do
 
   defp handle_insert({:ok, %Restaurant{}} = result), do: result
 
-  defp handle_insert({:error, %Restaurant{}} = result),
+  defp handle_insert({:error, result}),
     do: {:error, %{result: result, status: :bad_request}}
 end
